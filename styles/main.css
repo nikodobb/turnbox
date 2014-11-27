@@ -891,8 +891,6 @@ body {
   line-height: 1.42857143;
   color: #333333;
   background-color: #ffffff;
-  padding-top: 70px;
-  padding-bottom: 20px;
 }
 input,
 button,
@@ -3922,7 +3920,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 25px 15px;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 20px;
   height: 70px;
 }
@@ -6285,5 +6283,64 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important;
+  }
+}
+body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+.navbar-header .tb-logo {
+  height: 35px;
+  margin: 16px 0 0 30px;
+}
+@media (min-width: 768px) {
+  .navbar-header .tb-logo {
+    margin: 16px 0 0 0;
+  }
+}
+.jumbotron-index {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background: url(../assets/hands.jpg);
+  background-size: 1300px 650px;
+  min-height: 550px;
+}
+.jumbotron-index h1,
+.jumbotron-index .h1 {
+  color: #f2f2f2;
+  text-shadow: 1px 2px 3px #373737;
+}
+.jumbotron-index p {
+  color: #f2f2f2;
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.jumbotron-index .shadow {
+  text-shadow: 1px 2px 3px #373737;
+}
+.jumbotron-index > hr {
+  border-top-color: #d5d5d5;
+}
+.container .jumbotron-index,
+.container-fluid .jumbotron-index {
+  border-radius: 6px;
+}
+.jumbotron-index .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron-index {
+    padding: 48px 0;
+  }
+  .container .jumbotron-index,
+  .container-fluid .jumbotron-index {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .jumbotron-index h1,
+  .jumbotron-index .h1 {
+    font-size: 35px;
   }
 }
