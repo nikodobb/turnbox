@@ -6303,7 +6303,7 @@ body {
   margin-bottom: 30px;
   color: inherit;
   background: url(../assets/hands.jpg);
-  background-size: 1300px 650px;
+  background-size: cover;
   min-height: 550px;
 }
 .jumbotron-index h1,
