@@ -4141,18 +4141,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #000202;
 }
 .navbar-default .navbar-brand {
-  color: #ffffff;
+  color: #777777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #e6e6e6;
+  color: #5e5e5e;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #ffffff;
+  color: #777777;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -4193,7 +4193,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #ffffff;
+    color: #777777;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4214,13 +4214,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #ffffff;
+  color: #777777;
 }
 .navbar-default .navbar-link:hover {
   color: #333333;
 }
 .navbar-default .btn-link {
-  color: #ffffff;
+  color: #777777;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
@@ -6289,36 +6289,22 @@ body {
   padding-top: 70px;
   padding-bottom: 20px;
 }
-.navbar-header .tb-logo {
-  height: 35px;
-  margin: 16px 0 0 30px;
-}
-@media (min-width: 768px) {
-  .navbar-header .tb-logo {
-    margin: 16px 0 0 0;
-  }
-}
 .jumbotron-index {
   padding: 30px 15px;
-  margin-bottom: 30px;
   color: inherit;
   background: url(../assets/hands.jpg);
   background-size: cover;
-  min-height: 550px;
+  height: 400px;
 }
 .jumbotron-index h1,
 .jumbotron-index .h1 {
   color: #f2f2f2;
-  text-shadow: 1px 2px 3px #373737;
 }
 .jumbotron-index p {
   color: #f2f2f2;
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
-}
-.jumbotron-index .shadow {
-  text-shadow: 1px 2px 3px #373737;
 }
 .jumbotron-index > hr {
   border-top-color: #d5d5d5;
@@ -6343,4 +6329,34 @@ body {
   .jumbotron-index .h1 {
     font-size: 35px;
   }
+}
+.navbar-brand {
+  float: left;
+  padding: 18px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 70px;
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+}
+.navbar-brand > img {
+  display: block;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+  }
+}
+.page-index .no-margin-bottom {
+  margin-bottom: 0px;
+}
+.page-index .atleta {
+  background: #ffffff;
+}
+.page-index .crossfit {
+  background: #eeeeee;
 }
