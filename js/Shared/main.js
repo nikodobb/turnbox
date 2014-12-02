@@ -23,4 +23,5 @@ angular.module('app.controllers', []).controller('AppCtrl', [
             name: 'Lisa Doe'
         };
     }
+
 ]);
