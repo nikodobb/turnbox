@@ -6289,6 +6289,27 @@ body {
   padding-top: 70px;
   padding-bottom: 20px;
 }
+.icon-middle {
+  vertical-align: middle;
+}
+.div-table {
+  display: table;
+}
+.div-table-cell {
+  display: table-cell;
+}
+.fa-6x {
+  font-size: 6em;
+}
+.fa-7x {
+  font-size: 7em;
+}
+.fa-8x {
+  font-size: 8em;
+}
+.fa-9x {
+  font-size: 9em;
+}
 .jumbotron-index {
   padding: 30px 15px;
   color: inherit;
