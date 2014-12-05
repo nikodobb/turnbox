@@ -6371,6 +6371,12 @@ body {
     margin-left: -15px;
   }
 }
+.navbar ul .form-signin {
+  width: 200px;
+}
+.navbar div .form-signin {
+  padding: 0px 15px;
+}
 .page-index .no-margin-bottom {
   margin-bottom: 0px;
 }
