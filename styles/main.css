@@ -6287,7 +6287,6 @@ button.close {
 }
 body {
   padding-top: 70px;
-  padding-bottom: 20px;
 }
 .icon-middle {
   vertical-align: middle;
@@ -6315,7 +6314,7 @@ body {
   color: inherit;
   background: url(../assets/ball.jpg);
   background-size: cover;
-  height: 400px;
+  height: 500px;
 }
 .jumbotron-index h1,
 .jumbotron-index .h1 {
@@ -6380,4 +6379,15 @@ body {
 }
 .page-index .crossfit {
   background: #eeeeee;
+}
+.page-index .footer {
+  background: #001d23;
+  padding: 30px 15px;
+}
+.page-index .footer li {
+  display: inline-block;
+  padding: 10px 10px 0;
+}
+.page-index .footer h4 {
+  color: #fff;
 }
