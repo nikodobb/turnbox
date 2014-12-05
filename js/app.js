@@ -13,6 +13,12 @@
                 redirectTo: '/index'
             }).when('/index', {
                 templateUrl: 'views/index-content.html'
+            }).when('/outside/register-user', {
+                templateUrl: 'views/outside/register-user.html'
+            }).when('/outside/signin', {
+                templateUrl: 'views/outside/signin.html'
+            }).when('/pages/dashboard', {
+                templateUrl: 'views/pages/dashboard.html'
             }).otherwise({
                 redirectTo: '/index'
             });
