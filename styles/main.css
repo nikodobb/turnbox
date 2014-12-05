@@ -6309,6 +6309,12 @@ body {
 .fa-9x {
   font-size: 9em;
 }
+.fa {
+  min-width: 14px;
+}
+.fa-left {
+  margin-right: 5px;
+}
 .jumbotron-index {
   padding: 30px 15px;
   color: inherit;
@@ -6376,6 +6382,7 @@ body {
 }
 .navbar div .form-signin {
   padding: 0px 15px;
+  color: #9d9d9d;
 }
 .page-index .no-margin-bottom {
   margin-bottom: 0px;
@@ -6393,7 +6400,4 @@ body {
 .page-index .footer li {
   display: inline-block;
   padding: 10px 10px 0;
-}
-.page-index .footer h4 {
-  color: #fff;
 }
