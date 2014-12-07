@@ -19,6 +19,14 @@
                 templateUrl: 'views/outside/signin.html'
             }).when('/pages/dashboard', {
                 templateUrl: 'views/pages/dashboard.html'
+            }).when('/pages/myturns', {
+                templateUrl: 'views/pages/myturns.html'
+            }).when('/pages/profile', {
+                templateUrl: 'views/pages/profile.html'
+            }).when('/pages/settings', {
+                templateUrl: 'views/pages/settings.html'
+            }).when('/pages/newturn', {
+                templateUrl: 'views/pages/newturn.html'
             }).otherwise({
                 redirectTo: '/index'
             });

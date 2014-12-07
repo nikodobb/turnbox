@@ -1,0 +1,19 @@
+#outside-content {
+  position: absolute;
+  top: @header_height;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: -blackberry-touch;
+  // .transition(left .3s ease-in-out);
+  @media (min-width:@screen-sm) {
+    top: @header_height;
+    width: auto;
+  }
+  // !important, avoid flikering for all pages.
+  // .transition(left .25s ease-in-out);
+  .transition(none);
+}

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#signin-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,67 +11,124 @@
                 <img src="assets/turnbox.png" class="img-responsive" style="max-width: 150px"/>
             </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <!-- FORM WITH DROPDOWN -->
-            <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li class="dropdown">
-                    <button class="btn btn-default dropdown-toggle navbar-btn" type="button" data-toggle="dropdown">Sing in</button>
-                    <ul class="dropdown-menu" role="menu" style="padding: 15px">
-                        <li class="form-group">
-                            <span class="btn btn-danger btn-small btn-block">
-                                <i class="fa fa-left fa-google"></i>Ingresa con Google
-                            </span>
-                        </li>
-                        <li class="form-group">
-                            <span class="btn btn-primary btn-small btn-block">
+        <div data-ng-show="isOutsidePage()">
+            <div class="collapse navbar-collapse" id="signin-navbar-collapse">
+                <!-- SIGNIN WITH DROPDOWN -->
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown">
+                        <button class="btn btn-default dropdown-toggle navbar-btn" type="button" data-toggle="dropdown">Sing in</button>
+                        <ul class="dropdown-menu" role="menu" style="padding: 15px">
+                            <li class="form-group">
+                                <span class="btn bg-facebook btn-small btn-block">
+                                    <i class="fa fa-left fa-facebook"></i>Ingresa con Facebook
+                                </span>
+                            </li>
+                            <li class="text-center form-group"><span>o ingresa tus datos abajo</span></li>
+                            <li>
+                                <form id="login-form" method="post" accept-charset="utf-8" class="">
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Nombre de usuario" type="text" id="top_login">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Contraseña" type="password" id="top_password">
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="#/pages/dashboard">
+                                            <button class="btn btn-primary" type="submit">Ingresar</button>
+                                        </a>
+                                    </div>
+                                    <a href="#">Restablecer Contraseña</a>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- SIGNIN COLLPASE FOR MOBILE -->
+                <div class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+                    <div class="form-signin">
+                        <div class="form-group">
+                            <span class="btn bg-facebook btn-small btn-block">
                                 <i class="fa fa-left fa-facebook"></i>Ingresa con Facebook
                             </span>
-                        </li>
-                        <li class="text-center form-group"><span>o ingresa tus datos abajo</span></li>
-                        <li>
-                            <form id="login-form" method="post" accept-charset="utf-8" class="">
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Nombre de usuario" type="text" id="top_login">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Contraseña" type="password" id="top_password">
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-success" type="submit">Ingresar</button>
-                                </div>
-                                <a href="#/pages/dashboard">Restablecer Contraseña</a>
-                            </form>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                        </div>
+                        <div class="text-center form-group"><span>o ingresa tus datos abajo</span></div>
+                        <form id="login-form" method="post" accept-charset="utf-8">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Nombre de usuario" type="text" id="top_login">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Contraseña" type="password" id="top_password">
+                            </div>
+                            <div class="form-group">
+                                <a href="#/pages/dashboard">
+                                    <button class="btn btn-primary" type="submit">Ingresar</button>
+                                </a>
+                            </div>
+                            <a href="#">Restablecer Contraseña</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-ng-hide="isOutsidePage()">
+            <div class="collapse navbar-collapse" id="profile-navbar-collapse">
+                <!-- PROFILE WITH DROPDOWN -->
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/avatar.jpg" alt="" class="img-circle img30_30">
+                            <span class="hidden-xs">
+                                <span data-i18n="Juan Martin">Juan Martin</span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" style="padding: 15px">
+                            <li>
+                                <a href="#/pages/profile">
+                                    <i class="fa fa-user"></i>
+                                    <span data-i18n="Mi Perfil">Mi Perfil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/pages/settings">
+                                    <i class="fa fa-user"></i>
+                                    <span data-i18n="Configuracion">Configuracion</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/index">
+                                    <i class="fa fa-sign-out"></i>
+                                    <span data-i18n="Salir">Salir</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <!-- FORM COLLPASE FOR MOBILE -->
-            <div class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
-                <div class="form-signin">
-                    <div class="form-group">
-                        <span class="btn btn-danger btn-small btn-block">
-                            <i class="fa fa-left fa-google"></i>Ingresa con Google
-                        </span>
+                <!-- PROFILE COLLPASE FOR MOBILE -->
+                <div class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+                    <div class="form-signin">
+                        <div class="form-group">
+                            <span class="btn bg-facebook btn-small btn-block">
+                                <i class="fa fa-left fa-facebook"></i>Ingresa con Facebook
+                            </span>
+                        </div>
+                        <div class="text-center form-group"><span>o ingresa tus datos abajo</span></div>
+                        <form id="login-form" method="post" accept-charset="utf-8">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Nombre de usuario" type="text" id="top_login">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Contraseña" type="password" id="top_password">
+                            </div>
+                            <div class="form-group">
+                                <a href="#/pages/dashboard">
+                                    <button class="btn btn-primary" type="submit">Ingresar</button>
+                                </a>
+                            </div>
+                            <a href="#">Restablecer Contraseña</a>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <span class="btn btn-primary btn-small btn-block">
-                            <i class="fa fa-left fa-facebook"></i>Ingresa con Facebook
-                        </span>
-                    </div>
-                    <div class="text-center form-group"><span>o ingresa tus datos abajo</span></div>
-                    <form id="login-form" method="post" accept-charset="utf-8">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Nombre de usuario" type="text" id="top_login">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Contraseña" type="password" id="top_password">
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-success" type="submit">Ingresar</button>
-                        </div>
-                        <a href="#">Restablecer Contraseña</a>
-                    </form>
                 </div>
             </div>
         </div>
