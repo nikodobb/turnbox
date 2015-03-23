@@ -6599,6 +6599,64 @@ body {
 .tabcontrol > .content > .body ul > li {
   display: list-item;
 }
+table.responsive {
+  border: 1px solid #ddd;
+}
+@media only screen and (max-width: 767px) {
+  table.responsive {
+    margin-bottom: 0;
+  }
+  .pinned {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 35%;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+  .pinned table {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+  }
+  .pinned table th,
+  .pinned table td {
+    white-space: nowrap;
+  }
+  .pinned td:last-child {
+    border-bottom: 0;
+  }
+  div.table-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+  }
+  div.table-wrapper div.scrollable {
+    margin-left: 35%;
+  }
+  div.table-wrapper div.scrollable {
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+  table.responsive td,
+  table.responsive th {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  table.responsive th:first-child,
+  table.responsive td:first-child,
+  table.responsive td:first-child,
+  table.responsive.pinned td {
+    display: none;
+  }
+}
 .view-containter {
   position: relative;
 }
@@ -7132,7 +7190,7 @@ a.bg-orange:hover {
   color: inherit;
   background: url(../assets/hands.jpg);
   background-size: cover;
-  height: 500px;
+  height: 100vh;
 }
 .jumbotron-index h1,
 .jumbotron-index .h1 {
@@ -7628,22 +7686,29 @@ img.img80_80 {
 .page-form-ele h3 {
   margin: 0;
 }
-.page-index .no-margin-bottom {
+.page-index-content .no-margin-bottom {
   margin-bottom: 0px;
 }
-.page-index .atleta {
+.page-index-content .atleta {
   background: #ffffff;
 }
-.page-index .crossfit {
+.page-index-content .crossfit {
   background: #eeeeee;
 }
-.page-index .footer {
+.page-index-content .footer {
   background: rgba(0, 0, 0, 0.85);
   padding: 30px 15px;
 }
-.page-index .footer li {
+.page-index-content .footer li {
   display: inline-block;
   padding: 10px 10px 0;
+}
+.page-index-content .footer li a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+.page-index-content .footer li a:hover {
+  color: #6bbe27;
 }
 .page-profile img.media-object {
   border-radius: 4px;

@@ -6,7 +6,6 @@
         'ngRoute',
         'app.controllers'
     ])
-
     .config([
         '$routeProvider', function($routeProvider) {
             return $routeProvider.when('/', {
@@ -19,6 +18,8 @@
                 templateUrl: 'views/outside/signin.html'
             }).when('/pages/dashboard', {
                 templateUrl: 'views/pages/dashboard.html'
+            }).when('/pages/mycompanies', {
+                templateUrl: 'views/pages/mycompanies.html'
             }).when('/pages/myturns', {
                 templateUrl: 'views/pages/myturns.html'
             }).when('/pages/profile', {

@@ -1,4 +1,4 @@
-.page-index{
+.page-index-content{
   .no-margin-bottom {
     margin-bottom: 0px;
   }
@@ -11,10 +11,16 @@
   .footer {
     background: @navbar-default-bg;
     padding: 30px 15px;
-  }
-
-  .footer li{
-    display: inline-block;
-    padding: 10px 10px 0;
+    li{
+      a{
+        color: @gray-lighter;
+        text-decoration: none;
+      }
+      a:hover{
+        color: @brand-primary;
+      }
+      display: inline-block;
+      padding: 10px 10px 0;
+    }
   }
 }

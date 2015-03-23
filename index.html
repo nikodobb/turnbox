@@ -6,8 +6,10 @@
         <title>Turnbox - Turnos Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type='text/css' href="styles/font-awesome.min.css">
-        <link href="styles/main.css" rel="stylesheet">
+
+        <link rel="stylesheet" type='text/css' href="styles/vendor/animate.min.css">
+        <link rel="stylesheet" type='text/css' href="styles/vendor/font-awesome.min.css">
+        <link rel="stylesheet" type='text/css' href="styles/main.css" >
     </head>
     <body data-ng-app="app" id="app">
         <!--[if lt IE 9]>
@@ -15,25 +17,18 @@
         <![endif]-->
 
         <div data-ng-controller="AppCtrl">
-            <div class="no-print">
-                <section data-ng-include=" 'views/navbar.html' " id="navbar"></section>
-            </div>
+            <section id="navbar" class="no-print" data-ng-include="'views/navbar.html'"></section>
+
             <div data-ng-show="isOutsidePage()"
                  data-ng-cloak
                  class="no-print">
-
-                <section data-ng-view></section>
+                <section data-ng-view class="view-container"></section>
             </div>
-
 
             <div data-ng-hide="isOutsidePage()"
                  data-ng-cloak>
-                <div class="no-print">
-                    <aside data-ng-include=" 'views/sidebar.html' " id="nav-container"></aside>
-                </div>
-                <div class="view-container">
-                    <section data-ng-view id="content"></section>
-                </div>
+                <aside id="nav-container" data-ng-include="'views/sidebar.html'" class="no-print animated fadeIn"></aside>
+                <section id="content" data-ng-view class="view-container animated fadeIn"></section>
             </div>
         </div>
 
@@ -44,6 +39,10 @@
         <script type="text/javascript" src="lib/angular-route.min.js"></script>
         <script type="text/javascript" src="lib/underscore-min.js"></script>
         <script type="text/javascript" src="lib/responsive-tables.js"></script>
+        <script type="text/javascript" src="lib/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
 
         <!-- build:js({.tmp,client}) scripts/app.js -->
         <script type="text/javascript" src="js/app.js"></script>
